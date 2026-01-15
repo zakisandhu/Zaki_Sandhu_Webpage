@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <!-- SEO Meta Tags -->
   <meta name="description" content="Zaki Sandhu - Options Momentum Index Trader, Tech Entrepreneur, Marketing Strategist, Data Scientist, and more.">
-  <meta name="keywords" content="Zaki Sandhu, trading, tech entrepreneur, market analyst, data scientist, economic researcher, AI programmer, John Abbot College, personal webpage">
+  <meta name="keywords" content="Zaki Sandhu, trading, tech entrepreneur, market analyst, data scientist, economic researcher, AI programmer, John Abbott College, personal webpage">
   <meta name="author" content="Zaki Sandhu">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Zaki Sandhu - Multifaceted Professional</title>
@@ -151,7 +151,7 @@
     <section id="about">
       <h2>About Me</h2>
       <p>Hello, I'm <strong>Zaki Sandhu</strong>—a passionate and multifaceted professional with expertise as an options momentum index trader, tech entrepreneur, salesperson, marketing strategist, conversion copywriter, AI programmer, market analyst, economic researcher, data scientist, climate researcher, psychology researcher, creator, and writer.</p>
-      <p>Currently, I'm also a student at John Abbot College studying Sciences. My relentless curiosity and love for learning have led me to immerse myself in diverse fields ranging from macroeconomics and microeconomics to quantum mechanics and automotive engineering. I pride myself on being a philomath who is always eager to expand my horizons.</p>
+      <p>Currently, I'm also a student at John Abbott College studying Sciences. My relentless curiosity and love for learning have led me to immerse myself in diverse fields ranging from macroeconomics and microeconomics to quantum mechanics and automotive engineering. I pride myself on being a philomath who is always eager to expand my horizons.</p>
     </section>
     
     <!-- Professional Experience Section -->
@@ -205,7 +205,8 @@
   <!-- JavaScript for Search Functionality -->
   <script>
     // Listen for input changes in the search box
-    document.getElementById('searchBox').addEventListener('input', function() {
+    const searchBox = document.getElementById('searchBox');
+    searchBox.addEventListener('input', function() {
       let query = this.value.toLowerCase();
       // Get all sections
       let sections = document.querySelectorAll('section');
@@ -216,6 +217,16 @@
         } else {
           section.classList.add('hidden');
         }
+      });
+    });
+
+    // Clear search and show all sections when navigation links are clicked
+    document.querySelectorAll('nav a[href^="#"]').forEach(link => {
+      link.addEventListener('click', () => {
+        searchBox.value = '';
+        document.querySelectorAll('section').forEach(section => {
+          section.classList.remove('hidden');
+        });
       });
     });
   </script>
